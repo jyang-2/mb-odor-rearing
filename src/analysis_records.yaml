@@ -1,0 +1,94 @@
+# 2021-08-30 fly 1
+- flydate: 2021-08-30
+  flynum: 1
+  rear_type: 1-6ol+EP
+  mov: movie_002
+  chunk: 0
+  conc: -5
+
+- flydate: 2021-08-30
+  flynum: 1
+  rear_type: 1-6ol+EP
+  mov: movie_002
+  chunk: 1
+  conc: -4
+
+- flydate: 2021-08-30
+  flynum: 2
+  rear_type: 1-6ol+EP
+  mov: movie_002
+  chunk: 2
+  conc: -3
+---
+# 2021-08-30 fly 2
+- flydate: 2021-08-30
+  flynum: 2
+  rear_type: 1-6ol+EP
+  mov: movie_002
+  chunk: 2
+  conc: -3
+
+- flydate: 2021-08-30
+  flynum: 2
+  rear_type: pfo
+  mov: movie_001
+  chunk: 0
+  conc: -5
+
+- flydate: 2021-08-30
+  flynum: 2
+  rear_type: pfo
+  mov: movie_001
+  chunk: 1
+  conc: -4
+
+- flydate: 2021-08-30
+  flynum: 2
+  rear_type: pfo
+  mov: movie_001
+  chunk: 1
+  conc: -3
+---
+# 2021-08-30 fly 3
+- flydate: 2021-08-30
+  flynum: 3
+  rear_type: 1-6ol+EP
+  mov: movie_001
+  chunk: 0
+  conc: -5
+
+- flydate: 2021-08-30
+  flynum: 3
+  rear_type: 1-6ol+EP
+  mov: movie_001
+  chunk: 1
+  conc: -4
+
+- flydate: 2021-08-30
+  flynum: 3
+  rear_type: 1-6ol+EP
+  mov: movie_001
+  chunk: 2
+  conc: -3
+---
+- flydate: 2021-08-30
+  flynum: 4
+  rear_type: 1-6ol+EP
+  mov: movie_001
+  chunk: ~
+  conc: -5
+
+- flydate: 2021-08-30
+  flynum: 4
+  rear_type: 1-6ol+EP
+  mov: movie_002
+  chunk: ~
+  conc: -4
+
+- flydate: 2021-08-30
+  flynum: 4
+  rear_type: 1-6ol+EP
+  mov: movie_002
+  chunk: ~
+  conc: -3
+---

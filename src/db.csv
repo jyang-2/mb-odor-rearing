@@ -1,0 +1,15 @@
+date,fly_num,movies,rearing,suite2p,run,preprocessed,age,notes,anatomy,activity,embedding,planes,fly_uid
+2021-03-23,1,movie_substack_1_to_5,pfo,True,False,True,,,"",,,,0
+2021-04-23,2,"movie_005, movie_006, movie_007, movie_008",1-5ol [-3] + 1-6ol [-3],True,False,True,,,,,,,1
+2021-06-26,1,"movie_002, movie_004, movie_005",1-6ol [-2] + EP [-2],True,True,True,4 days,,,,,1,2
+2021-06-26,2,"movie_001, movie_002, movie_003",pfo,True,True,True,4 days,,,,,1,3
+2021-08-11,1,"movie_001, movie_002, movie_003, movie_004, movie_005, movie_006",1-6ol [-2] + EP [-2],True,True,True,1.5 days,**re-run suite2p w/o cellpose**,1,0,,16,4
+2021-07-27,1,"movie_001, movie_002, movie_003",pfo,**running movie_003 anat**,"**run rasterplot, corrmats**",True,1.5 days,"young, strong/distinct responses",0,1,,16,5
+2021-06-14,1,"movie_001, movie_002, movie_003, movie_004",1-6ol [-2] + EP [-2],True,True,True,5 days,,,,,1,6
+2021-06-16,1,"movie, movie_001, movie_002, movie_003",pfo,True,"**run rasterplot, corrmat**",make json files,7 days,,,,0,1,7
+2021-08-16,2,"movie_001, movie_002, movie_003",pfo,False,False,False,6,x_x uncertain rearing condition....,,,,16,8
+2021-08-24,1,"movie_002, movie_003, movie_004, movie_005",pfo,True,**run rasterplot**,True,1,young,1,0,,16,9
+2021-08-30,1,"movie_001, movie_002, movie_003",1-6ol [-2] + EP [-2],True,True,True,6,,1,,1,16,10
+2021-08-30,2,"movie_001, movie_002 ",pfo,True,True,True,6,,1,,1,16,11
+2021-08-30,3,movie_001,1-6ol [-2] + EP [-2],True,True,True,6,,1,,1,16,12
+2021-08-30,4,"movie_001, movie_002, movie_003",1-6ol [-2] + EP [-2],True,True,True,6,,1,,1,16,12

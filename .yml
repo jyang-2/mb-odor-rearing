@@ -1,0 +1,105 @@
+Date: '2021-02-22'
+Project: mb-odor-rearing
+Reared: 1-5ol (-2), 1-6ol (-2)
+- {name: John Smith, age: 33}
+
+pin assignments:
+    pin45: pfo
+    pin46: 1-5ol (-6)
+    pin47: 1-5ol (-5)
+    pin42: 1-5ol (-4)
+    pin41: 1-5ol (-3)
+    pin38: 1-6ol (-6)
+    pin39: 1-6ol (-3)
+    pin48: 1-6ol (-4)
+    pin49: 1-6ol (-5)
+
+acquisitions:
+   -movie_1En6:
+        thorimage: movie
+        thorsync:  SyncData000
+        stimulus:
+            const int channelA[] : [45, 46, 45, 46]
+            const int channelB[] : [45, 45, 38, 38]
+            concentration: 1E-06
+    
+   -movie_1En6_2:
+        thorimage: movie001
+        thorsync:  SyncData002
+        stimulus:
+            const int channelA[] : [45, 47, 45, 47]
+            const int channelB[] : [45, 45, 49, 49]
+            note: stopped early?
+   -movie_1En5:
+        thorimage: movie002
+        thorsync:  SyncData003
+        stimulus:
+            const int channelA[] : [45, 47, 45, 47]
+            const int channelB[] : [45, 45, 49, 49]
+            note: same as previous
+            concentration: 1E-05
+    
+   -movie_1En4:
+        thorimage: movie003
+        thorsync:  SyncData004
+        stimulus:
+            const int channelA[] : [45, 42, 45, 42]
+            const int channelB[] : [45, 45, 48, 48]
+            note: same as previous
+            concentration: -1e-04
+    
+   -movie_1En3:
+        thorimage: movie004
+        thorsync:  SyncData005
+        stimulus:
+            const int channelA[] : [45, 41, 45, 41]
+            const int channelB[] : [45, 45, 39, 39]
+            concentration: 1e-03
+            note: >
+                 same as previous
+                 first response noticeably larger than pfo response
+    
+   -movie_1En3_2:
+        thorimage: movie005
+        thorsync:  SyncData006
+        stimulus:
+            const int channelA[] : [45, 41, 41, 45]
+            const int channelB[] : [45, 39, 45, 39]
+            concentration: 1e-03
+            note: > 
+                 shuffled, continuous, 2odor pres comes first, 1 long movie
+                 first response noticeably larger than pfo response
+    
+   -movie_1En6_3:
+        thorimage: movie006
+        thorsync:  SyncData007
+        stimulus:
+            const int channelA[] : [45, 46, 46, 45]
+            const int channelB[] : [45, 38, 45, 38]
+            concentration: 1E-06
+            note: >
+                 continuous, both odors first
+                 doesn't look like there's a response
+    
+   -movie_1pentanol:
+        thorimage: movie007
+        thorsync:  SyncData008
+        stimulus:
+            const int channelA[] : [45, 46, 47,42,41]
+            const int channelB[] : [45,45,45,45,45]
+            note: > 
+                 1pentanol concentration series
+                 continuous, pfo to weak to strong
+            serial output: "    1: 	(45, 45) (46, 45) (47, 45) (42, 45) (41, 45)  DONE"
+
+   -movie_1hexanol:
+        thorimage: movie008
+        thorsync:  SyncData009
+        stimulus:
+            const int channelA[] : [45,38,49,48,39]
+            const int channelB[] : [45,45,45,45,45]
+            note: > 
+                 1hexanol concentration series
+                 continuous, pfo to weak to strong
+
+            serial output: "1: 	(45, 45) (38, 45) (49, 45) (48, 45) (39, 45)  DONE"

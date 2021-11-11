@@ -1,0 +1,1 @@
+hg = glyphplot(tuning.maxPeakResp,'centers',Y*10, 'standardize', 'matrix');

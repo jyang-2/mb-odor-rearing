@@ -1,0 +1,1270 @@
+
+(base) C:\Users\remy>ls
+'ls' is not recognized as an internal or external command,
+operable program or batch file.
+
+(base) C:\Users\remy>cd Downloads
+
+(base) C:\Users\remy\Downloads>conda env create -f environment.yml
+Collecting package metadata (repodata.json): done
+Solving environment: done
+
+Downloading and Extracting Packages
+python-dateutil-2.8. | 233 KB    | ############################################################################ | 100%
+scikit-learn-0.24.2  | 4.9 MB    | ############################################################################ | 100%
+setuptools-58.0.4    | 778 KB    | ############################################################################ | 100%
+sqlite-3.36.0        | 780 KB    | ############################################################################ | 100%
+python-3.9.7         | 16.5 MB   | ############################################################################ | 100%
+pip-21.2.4           | 1.8 MB    | ############################################################################ | 100%
+six-1.16.0           | 18 KB     | ############################################################################ | 100%
+llvmlite-0.36.0      | 12.4 MB   | ############################################################################ | 100%
+wheel-0.37.0         | 33 KB     | ############################################################################ | 100%
+numba-0.53.1         | 3.3 MB    | ############################################################################ | 100%
+scipy-1.7.1          | 13.8 MB   | ############################################################################ | 100%
+tzdata-2021a         | 111 KB    | ############################################################################ | 100%
+threadpoolctl-2.2.0  | 16 KB     | ############################################################################ | 100%
+tbb-2020.3           | 156 KB    | ############################################################################ | 100%
+tk-8.6.11            | 3.3 MB    | ############################################################################ | 100%
+Preparing transaction: done
+Verifying transaction: done
+Executing transaction: \
+
+    Windows 64-bit packages of scikit-learn can be accelerated using scikit-learn-intelex.
+    More details are available here: https://intel.github.io/scikit-learn-intelex
+
+    For example:
+
+        $ conda install scikit-learn-intelex
+        $ python -m sklearnex my_application.py
+
+
+done
+Installing pip dependencies: | Ran pip subprocess with arguments:
+['C:\\Users\\remy\\anaconda3\\envs\\rastermap\\python.exe', '-m', 'pip', 'install', '-U', '-r', 'C:\\Users\\remy\\Downloads\\condaenv.mrwp38vu.requirements.tx
+t']
+Pip subprocess output:
+
+Pip subprocess error:
+ERROR: Invalid requirement: 'pyqtgraph=0.11.0rc0' (from line 1 of C:\Users\remy\Downloads\condaenv.mrwp38vu.requirements.txt)
+Hint: = is not a valid operator. Did you mean == ?
+
+failed
+
+CondaEnvException: Pip failed
+
+
+(base) C:\Users\remy\Downloads>conda env list
+# conda environments:
+#
+base                  *  C:\Users\remy\anaconda3
+exploration              C:\Users\remy\anaconda3\envs\exploration
+matlab                   C:\Users\remy\anaconda3\envs\matlab
+mouseland                C:\Users\remy\anaconda3\envs\mouseland
+rastermap                C:\Users\remy\anaconda3\envs\rastermap
+suite2p                  C:\Users\remy\anaconda3\envs\suite2p
+
+
+(base) C:\Users\remy\Downloads>conda activate rastermap
+
+(rastermap) C:\Users\remy\Downloads>pip install PyQt5 PyQt5.sip
+Collecting PyQt5
+  Using cached PyQt5-5.15.4-cp36.cp37.cp38.cp39-none-win_amd64.whl (6.8 MB)
+Collecting PyQt5.sip
+  Downloading PyQt5_sip-12.9.0-cp39-cp39-win_amd64.whl (63 kB)
+     |████████████████████████████████| 63 kB 2.3 MB/s
+Collecting PyQt5-Qt5>=5.15
+  Using cached PyQt5_Qt5-5.15.2-py3-none-win_amd64.whl (50.1 MB)
+Installing collected packages: PyQt5.sip, PyQt5-Qt5, PyQt5
+Successfully installed PyQt5-5.15.4 PyQt5-Qt5-5.15.2 PyQt5.sip-12.9.0
+
+(rastermap) C:\Users\remy\Downloads>pip install rastermap
+Collecting rastermap
+  Using cached rastermap-0.1.3-py3-none-any.whl (80 kB)
+Collecting pyqtgraph
+  Downloading pyqtgraph-0.12.2-py3-none-any.whl (959 kB)
+     |████████████████████████████████| 959 kB 3.3 MB/s
+Requirement already satisfied: scipy in c:\users\remy\anaconda3\envs\rastermap\lib\site-packages (from rastermap) (1.7.1)
+Requirement already satisfied: scikit-learn in c:\users\remy\anaconda3\envs\rastermap\lib\site-packages (from rastermap) (0.24.2)
+Requirement already satisfied: numba in c:\users\remy\anaconda3\envs\rastermap\lib\site-packages (from rastermap) (0.53.1)
+Requirement already satisfied: matplotlib in c:\users\remy\anaconda3\envs\rastermap\lib\site-packages (from rastermap) (3.4.2)
+Collecting natsort
+  Using cached natsort-7.1.1-py3-none-any.whl (35 kB)
+Requirement already satisfied: numpy>=1.13.0 in c:\users\remy\anaconda3\envs\rastermap\lib\site-packages (from rastermap) (1.20.3)
+Requirement already satisfied: kiwisolver>=1.0.1 in c:\users\remy\anaconda3\envs\rastermap\lib\site-packages (from matplotlib->rastermap) (1.3.1)
+Requirement already satisfied: cycler>=0.10 in c:\users\remy\anaconda3\envs\rastermap\lib\site-packages (from matplotlib->rastermap) (0.10.0)
+Requirement already satisfied: python-dateutil>=2.7 in c:\users\remy\anaconda3\envs\rastermap\lib\site-packages (from matplotlib->rastermap) (2.8.2)
+Requirement already satisfied: pillow>=6.2.0 in c:\users\remy\anaconda3\envs\rastermap\lib\site-packages (from matplotlib->rastermap) (8.3.1)
+Requirement already satisfied: pyparsing>=2.2.1 in c:\users\remy\anaconda3\envs\rastermap\lib\site-packages (from matplotlib->rastermap) (2.4.7)
+Requirement already satisfied: six in c:\users\remy\anaconda3\envs\rastermap\lib\site-packages (from cycler>=0.10->matplotlib->rastermap) (1.16.0)
+Requirement already satisfied: llvmlite<0.37,>=0.36.0rc1 in c:\users\remy\anaconda3\envs\rastermap\lib\site-packages (from numba->rastermap) (0.36.0)
+Requirement already satisfied: setuptools in c:\users\remy\anaconda3\envs\rastermap\lib\site-packages (from numba->rastermap) (58.0.4)
+Requirement already satisfied: threadpoolctl>=2.0.0 in c:\users\remy\anaconda3\envs\rastermap\lib\site-packages (from scikit-learn->rastermap) (2.2.0)
+Requirement already satisfied: joblib>=0.11 in c:\users\remy\anaconda3\envs\rastermap\lib\site-packages (from scikit-learn->rastermap) (1.0.1)
+Installing collected packages: pyqtgraph, natsort, rastermap
+Successfully installed natsort-7.1.1 pyqtgraph-0.12.2 rastermap-0.1.3
+
+(rastermap) C:\Users\remy\Downloads>python -m rastermap
+Traceback (most recent call last):
+  File "C:\Users\remy\anaconda3\envs\rastermap\lib\runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "C:\Users\remy\anaconda3\envs\rastermap\lib\runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\rastermap\__main__.py", line 2, in <module>
+    from rastermap import gui
+  File "C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\rastermap\gui.py", line 12, in <module>
+    import rastermap.run
+  File "C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\rastermap\run.py", line 6, in <module>
+    class RunWindow(QtGui.QDialog):
+AttributeError: module 'PyQt5.QtGui' has no attribute 'QDialog'
+
+(rastermap) C:\Users\remy\Downloads>conda list
+# packages in environment at C:\Users\remy\anaconda3\envs\rastermap:
+#
+# Name                    Version                   Build  Channel
+blas                      1.0                         mkl
+brotli                    1.0.9                ha925a31_2
+ca-certificates           2021.7.5             haa95532_1
+certifi                   2021.5.30        py39haa95532_0
+cycler                    0.10.0           py39haa95532_0
+fonttools                 4.25.0             pyhd3eb1b0_0
+freetype                  2.10.4               hd328e21_0
+icc_rt                    2019.0.0             h0cc432a_1
+icu                       58.2                 ha925a31_3
+intel-openmp              2021.3.0          haa95532_3372
+joblib                    1.0.1              pyhd3eb1b0_0
+jpeg                      9d                   h2bbff1b_0
+kiwisolver                1.3.1            py39hd77b12b_0
+libpng                    1.6.37               h2a8f88b_0
+libtiff                   4.2.0                hd0e1b90_0
+llvmlite                  0.36.0           py39h34b8924_4
+lz4-c                     1.9.3                h2bbff1b_1
+matplotlib                3.4.2            py39haa95532_0
+matplotlib-base           3.4.2            py39h49ac443_0
+mkl                       2021.3.0           haa95532_524
+mkl-service               2.4.0            py39h2bbff1b_0
+mkl_fft                   1.3.0            py39h277e83a_2
+mkl_random                1.2.2            py39hf11a4ad_0
+munkres                   1.1.4                      py_0
+natsort                   7.1.1                    pypi_0    pypi
+numba                     0.53.1           py39hf11a4ad_0
+numpy                     1.20.3           py39ha4e8547_0
+numpy-base                1.20.3           py39hc2deb75_0
+olefile                   0.46               pyhd3eb1b0_0
+openssl                   1.1.1l               h2bbff1b_0
+pillow                    8.3.1            py39h4fa10fc_0
+pip                       21.2.4           py38haa95532_0
+pyparsing                 2.4.7              pyhd3eb1b0_0
+pyqt                      5.9.2            py39hd77b12b_6
+pyqt5                     5.15.4                   pypi_0    pypi
+pyqt5-qt5                 5.15.2                   pypi_0    pypi
+pyqt5-sip                 12.9.0                   pypi_0    pypi
+pyqtgraph                 0.12.2                   pypi_0    pypi
+python                    3.9.7                h6244533_1
+python-dateutil           2.8.2              pyhd3eb1b0_0
+qt                        5.9.7            vc14h73c81de_0
+rastermap                 0.1.3                    pypi_0    pypi
+scikit-learn              0.24.2           py39hf11a4ad_1
+scipy                     1.7.1            py39hbe87c03_2
+setuptools                58.0.4           py39haa95532_0
+sip                       4.19.13          py39hd77b12b_0
+six                       1.16.0             pyhd3eb1b0_0
+sqlite                    3.36.0               h2bbff1b_0
+tbb                       2020.3               h74a9793_0
+threadpoolctl             2.2.0              pyh0d69192_0
+tk                        8.6.11               h2bbff1b_0
+tornado                   6.1              py39h2bbff1b_0
+tzdata                    2021a                h5d7bf9c_0
+vc                        14.2                 h21ff451_1
+vs2015_runtime            14.27.29016          h5e58377_2
+wheel                     0.37.0             pyhd3eb1b0_1
+wincertstore              0.2              py39h2bbff1b_0
+xz                        5.2.5                h62dcd97_0
+zlib                      1.2.11               h62dcd97_4
+zstd                      1.4.9                h19a0ad4_0
+
+(rastermap) C:\Users\remy\Downloads>pip install pyqtgraph==0.11rc0
+Collecting pyqtgraph==0.11rc0
+  Downloading pyqtgraph-0.11.0rc0-py3-none-any.whl (788 kB)
+     |████████████████████████████████| 788 kB 3.3 MB/s
+Requirement already satisfied: numpy>=1.8.0 in c:\users\remy\anaconda3\envs\rastermap\lib\site-packages (from pyqtgraph==0.11rc0) (1.20.3)
+Installing collected packages: pyqtgraph
+  Attempting uninstall: pyqtgraph
+    Found existing installation: pyqtgraph 0.12.2
+    Uninstalling pyqtgraph-0.12.2:
+      Successfully uninstalled pyqtgraph-0.12.2
+Successfully installed pyqtgraph-0.11.0rc0
+
+(rastermap) C:\Users\remy\Downloads>python -m rastermap
+ERROR: this is not a *.npy file :(
+G:/HongLab @ Caltech Dropbox/Remy/mb_odor_rearing/data/processed_data/2021-08-30/2/movie_001/1/suite2p_ori/combined/embedding.npy
+ERROR: this is not a *.npy file :(
+(4109, 2907)
+using iscell.npy in folder
+plotted activity
+plotted colorbar
+done loading
+Running rastermap!
+starting process
+(4984, 2907)
+plotted activity
+plotted colorbar
+done loading
+Running rastermap!
+starting process
+(4984, 2)
+plotted activity
+plotted colorbar
+[array([[16.66427764, 12.92592524],
+       [10.77313201,  9.08387374]]), array([[10.77313201,  9.08387374],
+       [15.35630266,  0.53034401]]), array([[15.35630266,  0.53034401],
+       [18.85088649,  2.20483209]]), array([[18.85088649,  2.20483209],
+       [17.54041755,  9.99484188]]), array([[17.54041755,  9.99484188],
+       [16.88518308, 13.19821039]]), array([[16.88518308, 13.19821039],
+       [15.9387333 , 11.23250699]])] [array([[10.81427386,  9.02078968],
+       [10.73199015,  9.14695781],
+       [16.62313578, 12.98900931],
+       [16.70541949, 12.86284117],
+       [10.81427386,  9.02078968]]), array([[15.28991758,  0.49477333],
+       [15.42268774,  0.56591468],
+       [10.83951709,  9.11944442],
+       [10.70674693,  9.04830307],
+       [15.28991758,  0.49477333]]), array([[18.88343126,  2.13691237],
+       [18.81834171,  2.27275182],
+       [15.32375788,  0.59826373],
+       [15.38884743,  0.46242428],
+       [18.88343126,  2.13691237]]), array([[17.46614676,  9.98234783],
+       [17.61468834, 10.00733594],
+       [18.92515728,  2.21732615],
+       [18.7766157 ,  2.19233804],
+       [17.46614676,  9.98234783]]), array([[16.81139644, 13.1831179 ],
+       [16.95896973, 13.21330288],
+       [17.61420419, 10.00993437],
+       [17.46663091,  9.97974939],
+       [16.81139644, 13.1831179 ]]), array([[16.00659179, 11.19983473],
+       [15.8708748 , 11.26517925],
+       [16.81732459, 13.23088266],
+       [16.95304158, 13.16553813],
+       [16.00659179, 11.19983473]])]
+yo
+Traceback (most recent call last):
+  File "C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\rastermap\gui.py", line 450, in imgROI_position
+    self.img.setImage(self.sp_smoothed[np.ix_(yrange,xrange)])
+  File "C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 275, in setImage
+    mn, mx = np.nanmin(img), np.nanmax(img)
+  File "<__array_function__ internals>", line 5, in nanmin
+  File "C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\numpy\lib\nanfunctions.py", line 319, in nanmin
+    res = np.fmin.reduce(a, axis=axis, out=out, **kwargs)
+ValueError: zero-size array to reduction operation fmin which has no identity
+plotted activity
+plotted colorbar
+[array([[ 9.6048001 , 39.04356997],
+       [ 7.85750819, 37.80590487]]), array([[ 7.85750819, 37.80590487],
+       [ 9.31358478, 35.91300529]]), array([[ 9.31358478, 35.91300529],
+       [12.22573798, 37.80590487]]), array([[12.22573798, 37.80590487],
+       [ 9.6048001 , 39.33478529]]), array([[ 9.6048001 , 39.33478529],
+       [ 9.45919244, 38.89796231]])] [array([[ 8.08373583, 37.48652649],
+       [ 7.63128055, 38.12528324],
+       [ 9.37857246, 39.36294835],
+       [ 9.83102775, 38.7241916 ],
+       [ 8.08373583, 37.48652649]]), array([[ 9.00336517, 35.67437318],
+       [ 9.6238044 , 36.1516374 ],
+       [ 8.1677278 , 38.04453698],
+       [ 7.54728858, 37.56727276],
+       [ 9.00336517, 35.67437318]]), array([[12.43903722, 37.47775105],
+       [12.01243873, 38.13405868],
+       [ 9.10028554, 36.2411591 ],
+       [ 9.52688403, 35.58485148],
+       [12.43903722, 37.47775105]]), array([[ 9.40759245, 38.99671632],
+       [ 9.80200776, 39.67285427],
+       [12.42294563, 38.14397384],
+       [12.02853032, 37.46783589],
+       [ 9.40759245, 38.99671632]]), array([[ 9.83049453, 38.77420345],
+       [ 9.08789036, 39.02172117],
+       [ 9.23349802, 39.45854415],
+       [ 9.97610219, 39.21102643],
+       [ 9.83049453, 38.77420345]])]
+yo
+Traceback (most recent call last):
+  File "C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\rastermap\gui.py", line 450, in imgROI_position
+    self.img.setImage(self.sp_smoothed[np.ix_(yrange,xrange)])
+  File "C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\pyqtgraph\graphicsItems\ImageItem.py", line 275, in setImage
+    mn, mx = np.nanmin(img), np.nanmax(img)
+  File "<__array_function__ internals>", line 5, in nanmin
+  File "C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\numpy\lib\nanfunctions.py", line 319, in nanmin
+    res = np.fmin.reduce(a, axis=axis, out=out, **kwargs)
+ValueError: zero-size array to reduction operation fmin which has no identity
+plotted activity
+plotted colorbar
+yo
+plotted activity
+plotted colorbar
+[array([[ 7.15530903, 32.98565007],
+       [ 6.22535331, 30.93974748]]), array([[ 6.22535331, 30.93974748],
+       [ 8.08526475, 28.1963781 ]]), array([[ 8.08526475, 28.1963781 ],
+       [ 9.85218062, 28.1963781 ]]), array([[ 9.85218062, 28.1963781 ],
+       [10.45665184, 30.70725855]]), array([[10.45665184, 30.70725855],
+       [ 9.43370055, 33.03214786]]), array([[ 9.43370055, 33.03214786],
+       [ 8.13176254, 33.49712572]]), array([[ 8.13176254, 33.49712572],
+       [ 7.20180682, 33.31113457]])] [array([[ 6.25855977, 30.9246538 ],
+       [ 6.19214684, 30.95484117],
+       [ 7.12210256, 33.00074375],
+       [ 7.1885155 , 32.97055638],
+       [ 6.25855977, 30.9246538 ]]), array([[ 8.05507342, 28.17590929],
+       [ 8.11545608, 28.21684691],
+       [ 6.25554464, 30.96021629],
+       [ 6.19516198, 30.91927867],
+       [ 8.05507342, 28.17590929]]), array([[ 9.85218062, 28.15990224],
+       [ 9.85218062, 28.23285397],
+       [ 8.08526475, 28.23285397],
+       [ 8.08526475, 28.15990224],
+       [ 9.85218062, 28.15990224]]), array([[10.49211451, 30.6987211 ],
+       [10.42118918, 30.715796  ],
+       [ 9.81671796, 28.20491555],
+       [ 9.88764329, 28.18784065],
+       [10.49211451, 30.6987211 ]]), array([[ 9.40031359, 33.01745774],
+       [ 9.46708751, 33.04683797],
+       [10.4900388 , 30.72194867],
+       [10.42326488, 30.69256843],
+       [ 9.40031359, 33.01745774]]), array([[ 8.11949429, 33.4627749 ],
+       [ 8.14403078, 33.53147654],
+       [ 9.44596879, 33.06649868],
+       [ 9.4214323 , 32.99779703],
+       [ 8.11949429, 33.4627749 ]]), array([[ 7.2089604 , 33.27536706],
+       [ 7.19465324, 33.34690208],
+       [ 8.12460896, 33.53289323],
+       [ 8.13891612, 33.4613582 ],
+       [ 7.2089604 , 33.27536706]])]
+yo
+plotted activity
+plotted colorbar
+[array([[12.52980448, 16.1368753 ],
+       [ 9.77628897, 14.94785724]]), array([[ 9.77628897, 14.94785724],
+       [ 8.27437141, 11.38080305]]), array([[ 8.27437141, 11.38080305],
+       [ 9.71370907, 10.50468447]]), array([[ 9.71370907, 10.50468447],
+       [14.28204163, 15.26075673]]), array([[14.28204163, 15.26075673],
+       [13.28076326, 16.32461499]])] [array([[10.28532268, 13.7690466 ],
+       [ 9.26725525, 16.12666787],
+       [12.02077077, 17.31568593],
+       [13.0388382 , 14.95806467],
+       [10.28532268, 13.7690466 ]]), array([[ 9.45777174, 10.88253254],
+       [ 7.09097109, 11.87907355],
+       [ 8.59288864, 15.44612774],
+       [10.9596893 , 14.44958673],
+       [ 9.45777174, 10.88253254]]), array([[ 9.04608968,  9.40787356],
+       [10.38132846, 11.60149538],
+       [ 8.94199081, 12.47761396],
+       [ 7.60675202, 10.28399213],
+       [ 9.04608968,  9.40787356]]), array([[15.20807358, 14.37127673],
+       [13.35600969, 16.15023673],
+       [ 8.78767713, 11.39416447],
+       [10.63974101,  9.61520447],
+       [15.20807358, 14.37127673]]), array([[12.34573482, 15.44459702],
+       [14.2157917 , 17.20463297],
+       [15.21707007, 16.14077471],
+       [13.34701319, 14.38073875],
+       [12.34573482, 15.44459702]])]
+yo
+plotted activity
+plotted colorbar
+[array([[5.33559099, 7.84473103],
+       [3.84787802, 6.20443211]])] [array([[4.37720457, 5.72434847],
+       [3.31855147, 6.68451576],
+       [4.80626444, 8.32481467],
+       [5.86491754, 7.36464738],
+       [4.37720457, 5.72434847]])]
+yo
+nmin 5
+0.0030050277709960938
+0.012959480285644531
+0.013957500457763672
+C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\rastermap\mapping.py:705: FutureWarning: elementwise comparison failed; returning scalar instead, but
+ in the future will perform elementwise comparison
+  if self.init == 'pca':
+C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\rastermap\mapping.py:711: FutureWarning: elementwise comparison failed; returning scalar instead, but
+ in the future will perform elementwise comparison
+  elif self.init == 'dbisomap':
+C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\rastermap\mapping.py:718: FutureWarning: elementwise comparison failed; returning scalar instead, but
+ in the future will perform elementwise comparison
+  elif self.init == 'random':
+C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\rastermap\mapping.py:726: FutureWarning: elementwise comparison failed; returning scalar instead, but
+ in the future will perform elementwise comparison
+  elif self.init =='laplacian':
+C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\rastermap\mapping.py:736: FutureWarning: elementwise comparison failed; returning scalar instead, but
+ in the future will perform elementwise comparison
+  elif self.init=='lle':
+C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\rastermap\mapping.py:754: FutureWarning: elementwise comparison failed; returning scalar instead, but
+ in the future will perform elementwise comparison
+  if self.init=='pca' or self.init=='laplacian' or self.init=='lle' or self.init=='dbisomap':
+0.025951862335205078
+(18, 20)
+(50,)
+1.0
+time; iteration;  explained PC variance
+0.43s     0        0.6040      2
+0.43s    10        0.9424      4
+0.44s    20        0.9850      8
+0.44s    30        0.9725      18
+0.45s    40        0.9725      18
+0.45s   final      0.9725
+0.45s upsampled    0.9725
+[0.975 0.12  0.375 0.705 0.765]
+[1 2 3 4 0]
+plotted activity
+plotted colorbar
+yo
+nmin 5
+0.0010251998901367188
+0.0029990673065185547
+0.0029990673065185547
+C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\rastermap\mapping.py:705: FutureWarning: elementwise comparison failed; returning scalar instead, but
+ in the future will perform elementwise comparison
+  if self.init == 'pca':
+C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\rastermap\mapping.py:711: FutureWarning: elementwise comparison failed; returning scalar instead, but
+ in the future will perform elementwise comparison
+  elif self.init == 'dbisomap':
+C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\rastermap\mapping.py:718: FutureWarning: elementwise comparison failed; returning scalar instead, but
+ in the future will perform elementwise comparison
+  elif self.init == 'random':
+C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\rastermap\mapping.py:726: FutureWarning: elementwise comparison failed; returning scalar instead, but
+ in the future will perform elementwise comparison
+  elif self.init =='laplacian':
+C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\rastermap\mapping.py:736: FutureWarning: elementwise comparison failed; returning scalar instead, but
+ in the future will perform elementwise comparison
+  elif self.init=='lle':
+C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\rastermap\mapping.py:754: FutureWarning: elementwise comparison failed; returning scalar instead, but
+ in the future will perform elementwise comparison
+  if self.init=='pca' or self.init=='laplacian' or self.init=='lle' or self.init=='dbisomap':
+0.006998538970947266
+(18, 20)
+(50,)
+1.0
+time; iteration;  explained PC variance
+0.00s     0        0.6066      2
+0.00s    10        0.8932      4
+0.01s    20        0.9649      8
+0.01s    30        0.9642      18
+0.02s    40        0.9642      18
+0.02s   final      0.9642
+0.02s upsampled    0.9642
+[-0.015  0.225  0.54   0.625  0.775]
+[0 1 2 3 4]
+plotted activity
+plotted colorbar
+[array([[29.44251156, 10.80757358],
+       [27.84224979,  4.82764804]]), array([[27.84224979,  4.82764804],
+       [30.2847546 ,  4.40652652]]), array([[30.2847546 ,  4.40652652],
+       [32.39036218, 10.04955485]])] [array([[27.87979481,  4.81760084],
+       [27.80470478,  4.83769523],
+       [29.40496655, 10.81762078],
+       [29.48005657, 10.79752639],
+       [27.87979481,  4.81760084]]), array([[30.278151  ,  4.36822552],
+       [30.29135819,  4.44482752],
+       [27.84885339,  4.86594904],
+       [27.8356462 ,  4.78934704],
+       [30.278151  ,  4.36822552]]), array([[32.42677591, 10.03596757],
+       [32.35394845, 10.06314213],
+       [30.24834086,  4.4201138 ],
+       [30.32116833,  4.39293924],
+       [32.42677591, 10.03596757]])]
+[array([[30.08601672, 10.63409384],
+       [27.77056049,  5.75286178]]), array([[27.77056049,  5.75286178],
+       [30.33633631,  4.68900352]])] [array([[31.69413443,  3.89168731],
+       [23.84698655,  7.61403626],
+       [26.16244278, 12.49526831],
+       [34.00959066,  8.77291936],
+       [31.69413443,  3.89168731]]), array([[28.67305074,  0.67753446],
+       [31.99962188,  8.70047258],
+       [29.43384606,  9.76433085],
+       [26.10727492,  1.74139272],
+       [28.67305074,  0.67753446]])]
+yo
+nmin 6
+0.0020449161529541016
+0.0069942474365234375
+0.0069942474365234375
+C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\rastermap\mapping.py:705: FutureWarning: elementwise comparison failed; returning scalar instead, but
+ in the future will perform elementwise comparison
+  if self.init == 'pca':
+C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\rastermap\mapping.py:711: FutureWarning: elementwise comparison failed; returning scalar instead, but
+ in the future will perform elementwise comparison
+  elif self.init == 'dbisomap':
+C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\rastermap\mapping.py:718: FutureWarning: elementwise comparison failed; returning scalar instead, but
+ in the future will perform elementwise comparison
+  elif self.init == 'random':
+C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\rastermap\mapping.py:726: FutureWarning: elementwise comparison failed; returning scalar instead, but
+ in the future will perform elementwise comparison
+  elif self.init =='laplacian':
+C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\rastermap\mapping.py:736: FutureWarning: elementwise comparison failed; returning scalar instead, but
+ in the future will perform elementwise comparison
+  elif self.init=='lle':
+C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\rastermap\mapping.py:754: FutureWarning: elementwise comparison failed; returning scalar instead, but
+ in the future will perform elementwise comparison
+  if self.init=='pca' or self.init=='laplacian' or self.init=='lle' or self.init=='dbisomap':
+0.01999950408935547
+(18, 20)
+(50,)
+1.0
+time; iteration;  explained PC variance
+0.00s     0        0.5079      2
+0.01s    10        0.8332      4
+0.01s    20        0.9683      8
+0.02s    30        0.9702      18
+0.03s    40        0.9702      18
+0.03s   final      0.9702
+0.03s upsampled    0.9702
+[0.975 0.125 0.38  0.475 0.675 0.775]
+[1 2 3 4 5 0]
+plotted activity
+plotted colorbar
+[array([[ 0.73836329, 22.53545903],
+       [ 1.41215772, 20.17717854]]), array([[ 1.41215772, 20.17717854],
+       [ 4.78112986, 21.18787018]]), array([[ 4.78112986, 21.18787018],
+       [ 7.30785896, 21.94588891]]), array([[ 7.30785896, 21.94588891],
+       [ 6.71828884, 23.88304789]]), array([[ 6.71828884, 23.88304789],
+       [ 0.40146608, 21.44054309]])] [array([[ 0.4171278 , 19.89288005],
+       [ 2.40718764, 20.46147702],
+       [ 1.73339322, 22.81975752],
+       [-0.25666663, 22.25116055],
+       [ 0.4171278 , 19.89288005]]), array([[ 5.07849041, 20.19666542],
+       [ 4.48376931, 22.17907494],
+       [ 1.11479718, 21.1683833 ],
+       [ 1.70951827, 19.18597378],
+       [ 5.07849041, 20.19666542]]), array([[ 7.60521924, 20.95468407],
+       [ 7.01049869, 22.93709375],
+       [ 4.48376958, 22.17907502],
+       [ 5.07849014, 20.19666534],
+       [ 7.60521924, 20.95468407]]), array([[ 5.72827546, 23.58174458],
+       [ 7.70830222, 24.1843512 ],
+       [ 8.29787234, 22.24719222],
+       [ 6.31784558, 21.6445856 ],
+       [ 5.72827546, 23.58174458]]), array([[ 0.77467951, 20.47533746],
+       [ 0.02825265, 22.40574872],
+       [ 6.34507541, 24.84825352],
+       [ 7.09150227, 22.91784226],
+       [ 0.77467951, 20.47533746]])]
+yo
+nmin 7
+0.003051280975341797
+0.008997917175292969
+0.008997917175292969
+C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\rastermap\mapping.py:705: FutureWarning: elementwise comparison failed; returning scalar instead, but
+ in the future will perform elementwise comparison
+  if self.init == 'pca':
+C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\rastermap\mapping.py:711: FutureWarning: elementwise comparison failed; returning scalar instead, but
+ in the future will perform elementwise comparison
+  elif self.init == 'dbisomap':
+C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\rastermap\mapping.py:718: FutureWarning: elementwise comparison failed; returning scalar instead, but
+ in the future will perform elementwise comparison
+  elif self.init == 'random':
+C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\rastermap\mapping.py:726: FutureWarning: elementwise comparison failed; returning scalar instead, but
+ in the future will perform elementwise comparison
+  elif self.init =='laplacian':
+C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\rastermap\mapping.py:736: FutureWarning: elementwise comparison failed; returning scalar instead, but
+ in the future will perform elementwise comparison
+  elif self.init=='lle':
+C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\rastermap\mapping.py:754: FutureWarning: elementwise comparison failed; returning scalar instead, but
+ in the future will perform elementwise comparison
+  if self.init=='pca' or self.init=='laplacian' or self.init=='lle' or self.init=='dbisomap':
+0.01999640464782715
+(18, 20)
+(50,)
+1.0
+time; iteration;  explained PC variance
+0.00s     0        0.4927      2
+0.01s    10        0.7994      4
+0.02s    20        0.9498      8
+0.02s    30        0.9531      18
+0.03s    40        0.9531      18
+0.03s   final      0.9531
+0.03s upsampled    0.9531
+[0.025 0.235 0.325 0.42  0.525 0.62  0.88 ]
+[0 1 2 3 4 5 6]
+plotted activity
+plotted colorbar
+[array([[38.21817833,  6.95396289],
+       [35.69144923,  4.6799067 ]])] [array([[35.98041833,  4.3588312 ],
+       [35.40248013,  5.00098221],
+       [37.92920924,  7.2750384 ],
+       [38.50714743,  6.63288739],
+       [35.98041833,  4.3588312 ]])]
+[array([[37.54438391,  0.80558874],
+       [36.02834644,  5.60637404]]), array([[36.02834644,  5.60637404],
+       [38.38662694,  6.53284138]])] [array([[34.47721758,  5.1165471 ],
+       [37.5794753 ,  6.09620097],
+       [39.09551277,  1.29541568],
+       [35.99325505,  0.31576181],
+       [34.47721758,  5.1165471 ]]), array([[38.98140655,  5.0188505 ],
+       [37.79184733,  8.04683226],
+       [35.43356683,  7.12036492],
+       [36.62312605,  4.09238316],
+       [38.98140655,  5.0188505 ]])]
+yo
+nmin 8
+0.0009565353393554688
+0.0069561004638671875
+0.007951021194458008
+C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\rastermap\mapping.py:705: FutureWarning: elementwise comparison failed; returning scalar instead, but
+ in the future will perform elementwise comparison
+  if self.init == 'pca':
+C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\rastermap\mapping.py:711: FutureWarning: elementwise comparison failed; returning scalar instead, but
+ in the future will perform elementwise comparison
+  elif self.init == 'dbisomap':
+C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\rastermap\mapping.py:718: FutureWarning: elementwise comparison failed; returning scalar instead, but
+ in the future will perform elementwise comparison
+  elif self.init == 'random':
+C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\rastermap\mapping.py:726: FutureWarning: elementwise comparison failed; returning scalar instead, but
+ in the future will perform elementwise comparison
+  elif self.init =='laplacian':
+C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\rastermap\mapping.py:736: FutureWarning: elementwise comparison failed; returning scalar instead, but
+ in the future will perform elementwise comparison
+  elif self.init=='lle':
+C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\rastermap\mapping.py:754: FutureWarning: elementwise comparison failed; returning scalar instead, but
+ in the future will perform elementwise comparison
+  if self.init=='pca' or self.init=='laplacian' or self.init=='lle' or self.init=='dbisomap':
+0.023951053619384766
+(18, 20)
+(50,)
+1.0
+time; iteration;  explained PC variance
+0.00s     0        0.4592      2
+0.01s    10        0.6766      4
+0.02s    20        0.8810      8
+0.02s    30        0.9649      18
+0.03s    40        0.9649      18
+0.03s   final      0.9649
+0.03s upsampled    0.9649
+[0.025 0.23  0.4   0.3   0.35  0.475 0.725 0.825]
+[0 1 3 4 2 5 6 7]
+plotted activity
+plotted colorbar
+[array([[37.88128112, 29.35762761],
+       [35.35455202, 26.83089851]])] [array([[36.44947013, 25.73598473],
+       [34.2596339 , 27.92581229],
+       [36.78636301, 30.45254139],
+       [38.97619923, 28.26271384],
+       [36.44947013, 25.73598473]])]
+yo
+nmin 9
+0.001997232437133789
+0.006497621536254883
+0.007500171661376953
+C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\rastermap\mapping.py:705: FutureWarning: elementwise comparison failed; returning scalar instead, but
+ in the future will perform elementwise comparison
+  if self.init == 'pca':
+C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\rastermap\mapping.py:711: FutureWarning: elementwise comparison failed; returning scalar instead, but
+ in the future will perform elementwise comparison
+  elif self.init == 'dbisomap':
+C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\rastermap\mapping.py:718: FutureWarning: elementwise comparison failed; returning scalar instead, but
+ in the future will perform elementwise comparison
+  elif self.init == 'random':
+C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\rastermap\mapping.py:726: FutureWarning: elementwise comparison failed; returning scalar instead, but
+ in the future will perform elementwise comparison
+  elif self.init =='laplacian':
+C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\rastermap\mapping.py:736: FutureWarning: elementwise comparison failed; returning scalar instead, but
+ in the future will perform elementwise comparison
+  elif self.init=='lle':
+C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\rastermap\mapping.py:754: FutureWarning: elementwise comparison failed; returning scalar instead, but
+ in the future will perform elementwise comparison
+  if self.init=='pca' or self.init=='laplacian' or self.init=='lle' or self.init=='dbisomap':
+0.021492719650268555
+(18, 20)
+(50,)
+1.0
+time; iteration;  explained PC variance
+0.00s     0        0.3901      2
+0.02s    10        0.6396      4
+0.02s    20        0.8565      8
+0.03s    30        0.9472      18
+0.03s    40        0.9472      18
+0.04s   final      0.9472
+0.04s upsampled    0.9472
+[0.975 0.13  0.225 0.325 0.4   0.535 0.625 0.77  0.7  ]
+[1 2 3 4 5 6 8 7 0]
+plotted activity
+plotted colorbar
+[array([[15.16882696, 23.49949021],
+       [12.72632216, 27.54225678]])] [array([[11.87277687, 27.02657528],
+       [13.57986745, 28.05793828],
+       [16.02237225, 24.01517171],
+       [14.31528167, 22.98380871],
+       [11.87277687, 27.02657528]])]
+yo
+nmin 10
+0.0009996891021728516
+0.003998279571533203
+0.0059964656829833984
+C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\rastermap\mapping.py:705: FutureWarning: elementwise comparison failed; returning scalar instead, but
+ in the future will perform elementwise comparison
+  if self.init == 'pca':
+C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\rastermap\mapping.py:711: FutureWarning: elementwise comparison failed; returning scalar instead, but
+ in the future will perform elementwise comparison
+  elif self.init == 'dbisomap':
+C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\rastermap\mapping.py:718: FutureWarning: elementwise comparison failed; returning scalar instead, but
+ in the future will perform elementwise comparison
+  elif self.init == 'random':
+C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\rastermap\mapping.py:726: FutureWarning: elementwise comparison failed; returning scalar instead, but
+ in the future will perform elementwise comparison
+  elif self.init =='laplacian':
+C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\rastermap\mapping.py:736: FutureWarning: elementwise comparison failed; returning scalar instead, but
+ in the future will perform elementwise comparison
+  elif self.init=='lle':
+C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\rastermap\mapping.py:754: FutureWarning: elementwise comparison failed; returning scalar instead, but
+ in the future will perform elementwise comparison
+  if self.init=='pca' or self.init=='laplacian' or self.init=='lle' or self.init=='dbisomap':
+0.01599740982055664
+(18, 20)
+(50,)
+1.0
+time; iteration;  explained PC variance
+0.00s     0        0.3609      2
+0.01s    10        0.5182      4
+0.01s    20        0.8053      8
+0.02s    30        0.9623      18
+0.03s    40        0.9623      18
+0.03s   final      0.9623
+0.03s upsampled    0.9623
+[0.2   0.075 0.15  0.275 0.375 0.48  0.575 0.7   0.81  0.985]
+[1 2 0 3 4 5 6 7 8 9]
+plotted activity
+plotted colorbar
+[array([[33.78239802, 24.00483603],
+       [31.92946335, 22.57302287]]), array([[31.92946335, 22.57302287],
+       [32.51903347, 20.13051807]]), array([[32.51903347, 20.13051807],
+       [34.96153827, 22.32034996]])] [array([[32.82196505, 21.41802691],
+       [31.03696165, 23.72801884],
+       [32.88989632, 25.159832  ],
+       [34.67489973, 22.84984007],
+       [32.82196505, 21.41802691]]), array([[31.10013605, 19.78801978],
+       [33.93793089, 20.47301636],
+       [33.34836077, 22.91552116],
+       [30.51056593, 22.23052458],
+       [31.10013605, 19.78801978]]), array([[35.93591742, 21.233538  ],
+       [33.98715912, 23.40716193],
+       [31.54465432, 21.21733004],
+       [33.49341262, 19.04370611],
+       [35.93591742, 21.233538  ]])]
+yo
+nmin 11
+0.0010306835174560547
+0.005006551742553711
+0.005006551742553711
+C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\rastermap\mapping.py:705: FutureWarning: elementwise comparison failed; returning scalar instead, but
+ in the future will perform elementwise comparison
+  if self.init == 'pca':
+C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\rastermap\mapping.py:711: FutureWarning: elementwise comparison failed; returning scalar instead, but
+ in the future will perform elementwise comparison
+  elif self.init == 'dbisomap':
+C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\rastermap\mapping.py:718: FutureWarning: elementwise comparison failed; returning scalar instead, but
+ in the future will perform elementwise comparison
+  elif self.init == 'random':
+C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\rastermap\mapping.py:726: FutureWarning: elementwise comparison failed; returning scalar instead, but
+ in the future will perform elementwise comparison
+  elif self.init =='laplacian':
+C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\rastermap\mapping.py:736: FutureWarning: elementwise comparison failed; returning scalar instead, but
+ in the future will perform elementwise comparison
+  elif self.init=='lle':
+C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\rastermap\mapping.py:754: FutureWarning: elementwise comparison failed; returning scalar instead, but
+ in the future will perform elementwise comparison
+  if self.init=='pca' or self.init=='laplacian' or self.init=='lle' or self.init=='dbisomap':
+0.008001565933227539
+(18, 20)
+(50,)
+1.0
+time; iteration;  explained PC variance
+0.00s     0        0.3192      2
+0.01s    10        0.4651      4
+0.01s    20        0.7609      8
+0.02s    30        0.9534      18
+0.02s    40        0.9534      18
+0.03s   final      0.9534
+0.03s upsampled    0.9534
+[0.025 0.1   0.15  0.205 0.33  0.44  0.525 0.6   0.695 0.825 0.925]
+[ 0  1  2  3  4  5  6  7  8  9 10]
+plotted activity
+plotted colorbar
+yo
+nmin 100
+0.0
+0.005963802337646484
+0.005963802337646484
+C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\rastermap\mapping.py:705: FutureWarning: elementwise comparison failed; returning scalar instead, but
+ in the future will perform elementwise comparison
+  if self.init == 'pca':
+C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\rastermap\mapping.py:711: FutureWarning: elementwise comparison failed; returning scalar instead, but
+ in the future will perform elementwise comparison
+  elif self.init == 'dbisomap':
+C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\rastermap\mapping.py:718: FutureWarning: elementwise comparison failed; returning scalar instead, but
+ in the future will perform elementwise comparison
+  elif self.init == 'random':
+C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\rastermap\mapping.py:726: FutureWarning: elementwise comparison failed; returning scalar instead, but
+ in the future will perform elementwise comparison
+  elif self.init =='laplacian':
+C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\rastermap\mapping.py:736: FutureWarning: elementwise comparison failed; returning scalar instead, but
+ in the future will perform elementwise comparison
+  elif self.init=='lle':
+C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\rastermap\mapping.py:754: FutureWarning: elementwise comparison failed; returning scalar instead, but
+ in the future will perform elementwise comparison
+  if self.init=='pca' or self.init=='laplacian' or self.init=='lle' or self.init=='dbisomap':
+0.009962320327758789
+(18, 20)
+(50,)
+1.0
+time; iteration;  explained PC variance
+0.00s     0        0.3195      2
+0.01s    10        0.4157      4
+0.02s    20        0.5275      8
+0.03s    30        0.6108      18
+0.04s    40        0.6170      18
+0.04s   final      0.6170
+0.04s upsampled    0.6170
+[ 0.845  0.84  -0.025  0.955  0.095  0.115  0.     0.955  0.95   0.85
+  0.895  0.95   0.955  0.955  0.205  0.155  0.185  0.955  0.95   0.9
+  0.37   0.385  0.245  0.25   0.245  0.18   0.185  0.945  0.305  0.95
+  0.39   0.395  0.395  0.255  0.3    0.2    0.31   0.55   0.55   0.305
+  0.395  0.4    0.385  0.355  0.31   0.305  0.305  0.545  0.555  0.55
+  0.495  0.44   0.44   0.36   0.305  0.615  0.62   0.64   0.62   0.605
+  0.745  0.435  0.445  0.84   0.955  0.615  0.645  0.64   0.64   0.715
+  0.755  0.4    0.95  -0.005  0.955  0.66   0.695  0.695  0.71   0.74
+  0.805  0.845  0.04   0.015  0.96   0.     0.     0.695  0.695  0.705
+  0.845  0.845  0.015  0.015  0.07   0.1    0.    -0.01   0.96   0.85 ]
+[ 2 97 73 86 85  6 96 83 92 93 82 94  4 95  5 15 25 16 26 35 14 22 24 23
+ 33 34 46 45 39 54 28 36 44 43 53 20 21 42 30 31 32 40 71 41 61 51 52 62
+ 50 47 49 38 37 48 59 65 55 56 58 57 67 68 66 75 77 88 76 87 89 78 69 79
+ 60 70 80  1 63 91 81 90  0 99  9 10 19 27  8 11 72 29 18 17 74 12 64  7
+  3 13 84 98]
+plotted activity
+plotted colorbar
+[]
+plotted activity
+plotted colorbar
+yo
+nmin 25
+0.0
+0.004392862319946289
+0.004392862319946289
+C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\rastermap\mapping.py:705: FutureWarning: elementwise comparison failed; returning scalar instead, but
+ in the future will perform elementwise comparison
+  if self.init == 'pca':
+C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\rastermap\mapping.py:711: FutureWarning: elementwise comparison failed; returning scalar instead, but
+ in the future will perform elementwise comparison
+  elif self.init == 'dbisomap':
+C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\rastermap\mapping.py:718: FutureWarning: elementwise comparison failed; returning scalar instead, but
+ in the future will perform elementwise comparison
+  elif self.init == 'random':
+C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\rastermap\mapping.py:726: FutureWarning: elementwise comparison failed; returning scalar instead, but
+ in the future will perform elementwise comparison
+  elif self.init =='laplacian':
+C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\rastermap\mapping.py:736: FutureWarning: elementwise comparison failed; returning scalar instead, but
+ in the future will perform elementwise comparison
+  elif self.init=='lle':
+C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\rastermap\mapping.py:754: FutureWarning: elementwise comparison failed; returning scalar instead, but
+ in the future will perform elementwise comparison
+  if self.init=='pca' or self.init=='laplacian' or self.init=='lle' or self.init=='dbisomap':
+0.007414817810058594
+(18, 20)
+(50,)
+1.0
+time; iteration;  explained PC variance
+0.00s     0        0.4441      2
+0.01s    10        0.5846      4
+0.01s    20        0.7236      8
+0.02s    30        0.8725      18
+0.03s    40        0.8726      18
+0.03s   final      0.8726
+0.03s upsampled    0.8726
+[ 0.885  0.96   0.105 -0.025  0.95   0.435  0.325  0.145  0.2    0.245
+  0.415  0.42   0.25   0.61   0.725  0.525 -0.005  0.955  0.635  0.645
+  0.86   0.005  0.045  0.965  0.795]
+[ 3 16 21 22  2  7  8  9 12  6 10 11  5 15 13 18 19 14 24 20  0  4 17  1
+ 23]
+plotted activity
+plotted colorbar
+yo
+nmin 100
+0.0
+0.003000974655151367
+0.003000974655151367
+C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\rastermap\mapping.py:705: FutureWarning: elementwise comparison failed; returning scalar instead, but
+ in the future will perform elementwise comparison
+  if self.init == 'pca':
+C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\rastermap\mapping.py:711: FutureWarning: elementwise comparison failed; returning scalar instead, but
+ in the future will perform elementwise comparison
+  elif self.init == 'dbisomap':
+C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\rastermap\mapping.py:718: FutureWarning: elementwise comparison failed; returning scalar instead, but
+ in the future will perform elementwise comparison
+  elif self.init == 'random':
+C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\rastermap\mapping.py:726: FutureWarning: elementwise comparison failed; returning scalar instead, but
+ in the future will perform elementwise comparison
+  elif self.init =='laplacian':
+C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\rastermap\mapping.py:736: FutureWarning: elementwise comparison failed; returning scalar instead, but
+ in the future will perform elementwise comparison
+  elif self.init=='lle':
+C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\rastermap\mapping.py:754: FutureWarning: elementwise comparison failed; returning scalar instead, but
+ in the future will perform elementwise comparison
+  if self.init=='pca' or self.init=='laplacian' or self.init=='lle' or self.init=='dbisomap':
+0.005999088287353516
+(18, 20)
+(50,)
+1.0
+time; iteration;  explained PC variance
+0.00s     0        0.3195      2
+0.01s    10        0.4157      4
+0.02s    20        0.5275      8
+0.03s    30        0.6108      18
+0.04s    40        0.6170      18
+0.05s   final      0.6170
+0.05s upsampled    0.6170
+[ 0.845  0.84  -0.025  0.955  0.095  0.115  0.     0.955  0.95   0.85
+  0.895  0.95   0.955  0.955  0.205  0.155  0.185  0.955  0.95   0.9
+  0.37   0.385  0.245  0.25   0.245  0.18   0.185  0.945  0.305  0.95
+  0.39   0.395  0.395  0.255  0.3    0.2    0.31   0.55   0.55   0.305
+  0.395  0.4    0.385  0.355  0.31   0.305  0.305  0.545  0.555  0.55
+  0.495  0.44   0.44   0.36   0.305  0.615  0.62   0.64   0.62   0.605
+  0.745  0.435  0.445  0.84   0.955  0.615  0.645  0.64   0.64   0.715
+  0.755  0.4    0.95  -0.005  0.955  0.66   0.695  0.695  0.71   0.74
+  0.805  0.845  0.04   0.015  0.96   0.     0.     0.695  0.695  0.705
+  0.845  0.845  0.015  0.015  0.07   0.1    0.    -0.01   0.96   0.85 ]
+[ 2 97 73 86 85  6 96 83 92 93 82 94  4 95  5 15 25 16 26 35 14 22 24 23
+ 33 34 46 45 39 54 28 36 44 43 53 20 21 42 30 31 32 40 71 41 61 51 52 62
+ 50 47 49 38 37 48 59 65 55 56 58 57 67 68 66 75 77 88 76 87 89 78 69 79
+ 60 70 80  1 63 91 81 90  0 99  9 10 19 27  8 11 72 29 18 17 74 12 64  7
+  3 13 84 98]
+plotted activity
+plotted colorbar
+yo
+nmin 100
+0.0
+0.0029990673065185547
+0.003999948501586914
+C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\rastermap\mapping.py:705: FutureWarning: elementwise comparison failed; returning scalar instead, but
+ in the future will perform elementwise comparison
+  if self.init == 'pca':
+C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\rastermap\mapping.py:711: FutureWarning: elementwise comparison failed; returning scalar instead, but
+ in the future will perform elementwise comparison
+  elif self.init == 'dbisomap':
+C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\rastermap\mapping.py:718: FutureWarning: elementwise comparison failed; returning scalar instead, but
+ in the future will perform elementwise comparison
+  elif self.init == 'random':
+C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\rastermap\mapping.py:726: FutureWarning: elementwise comparison failed; returning scalar instead, but
+ in the future will perform elementwise comparison
+  elif self.init =='laplacian':
+C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\rastermap\mapping.py:736: FutureWarning: elementwise comparison failed; returning scalar instead, but
+ in the future will perform elementwise comparison
+  elif self.init=='lle':
+C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\rastermap\mapping.py:754: FutureWarning: elementwise comparison failed; returning scalar instead, but
+ in the future will perform elementwise comparison
+  if self.init=='pca' or self.init=='laplacian' or self.init=='lle' or self.init=='dbisomap':
+0.007001161575317383
+(18, 20)
+(50,)
+1.0
+time; iteration;  explained PC variance
+0.00s     0        0.3135      2
+0.01s    10        0.4302      4
+0.02s    20        0.5239      8
+0.03s    30        0.6143      18
+0.04s    40        0.6228      18
+0.05s   final      0.6228
+0.05s upsampled    0.6228
+[ 0.065  0.065  0.085  0.1    0.1    0.055  0.09   0.1    0.11   0.105
+  0.115  0.155  0.265  0.16   0.19   0.19   0.19   0.16   0.17   0.295
+  0.255  0.06   0.245  0.25   0.255  0.005  0.975  0.005  0.945 -0.005
+  0.005  0.95   0.     0.46   0.46   0.41   0.455  0.46   0.41   0.46
+  0.46   0.455  0.305  0.46   0.345  0.485  0.465  0.465  0.495  0.95
+  0.905  0.94   0.945  0.91   0.55   0.555  0.56   0.57   0.595  0.6
+  0.605  0.61   0.6    0.61   0.64   0.645  0.64   0.645  0.65   0.645
+  0.6    0.69   0.695  0.705  0.755  0.795  0.76   0.79   0.79   0.79
+  0.795  0.8    0.8    0.835  0.845  0.045  0.015  0.015  0.3    0.4
+  0.02   0.05   0.045  0.05   0.01   0.02   0.05   0.04   0.05   0.075]
+[29 32 27 25 30 94 86 87 90 95 97 85 92 91 96 98 93  5 21  1  0 99  2  6
+  3  4  7  9  8 10 11 17 13 18 14 16 15 22 23 20 24 12 19 88 42 44 89 38
+ 35 36 41 34 33 37 43 39 40 47 46 45 48 54 55 56 57 58 62 59 70 60 61 63
+ 64 66 65 67 69 68 71 72 73 74 76 78 79 77 75 80 81 82 83 84 50 53 51 52
+ 28 31 49 26]
+plotted activity
+plotted colorbar
+yo
+nmin 100
+0.0010154247283935547
+0.0029709339141845703
+0.003969430923461914
+C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\rastermap\mapping.py:705: FutureWarning: elementwise comparison failed; returning scalar instead, but
+ in the future will perform elementwise comparison
+  if self.init == 'pca':
+C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\rastermap\mapping.py:711: FutureWarning: elementwise comparison failed; returning scalar instead, but
+ in the future will perform elementwise comparison
+  elif self.init == 'dbisomap':
+C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\rastermap\mapping.py:718: FutureWarning: elementwise comparison failed; returning scalar instead, but
+ in the future will perform elementwise comparison
+  elif self.init == 'random':
+C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\rastermap\mapping.py:726: FutureWarning: elementwise comparison failed; returning scalar instead, but
+ in the future will perform elementwise comparison
+  elif self.init =='laplacian':
+C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\rastermap\mapping.py:736: FutureWarning: elementwise comparison failed; returning scalar instead, but
+ in the future will perform elementwise comparison
+  elif self.init=='lle':
+C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\rastermap\mapping.py:754: FutureWarning: elementwise comparison failed; returning scalar instead, but
+ in the future will perform elementwise comparison
+  if self.init=='pca' or self.init=='laplacian' or self.init=='lle' or self.init=='dbisomap':
+0.0069696903228759766
+(18, 20)
+(50,)
+1.0
+time; iteration;  explained PC variance
+0.00s     0        0.3195      2
+0.01s    10        0.4157      4
+0.02s    20        0.5275      8
+0.03s    30        0.6108      18
+0.03s    40        0.6170      18
+0.04s   final      0.6170
+0.05s upsampled    0.6170
+[ 0.845  0.84  -0.025  0.955  0.095  0.115  0.     0.955  0.95   0.85
+  0.895  0.95   0.955  0.955  0.205  0.155  0.185  0.955  0.95   0.9
+  0.37   0.385  0.245  0.25   0.245  0.18   0.185  0.945  0.305  0.95
+  0.39   0.395  0.395  0.255  0.3    0.2    0.31   0.55   0.55   0.305
+  0.395  0.4    0.385  0.355  0.31   0.305  0.305  0.545  0.555  0.55
+  0.495  0.44   0.44   0.36   0.305  0.615  0.62   0.64   0.62   0.605
+  0.745  0.435  0.445  0.84   0.955  0.615  0.645  0.64   0.64   0.715
+  0.755  0.4    0.95  -0.005  0.955  0.66   0.695  0.695  0.71   0.74
+  0.805  0.845  0.04   0.015  0.96   0.     0.     0.695  0.695  0.705
+  0.845  0.845  0.015  0.015  0.07   0.1    0.    -0.01   0.96   0.85 ]
+[ 2 97 73 86 85  6 96 83 92 93 82 94  4 95  5 15 25 16 26 35 14 22 24 23
+ 33 34 46 45 39 54 28 36 44 43 53 20 21 42 30 31 32 40 71 41 61 51 52 62
+ 50 47 49 38 37 48 59 65 55 56 58 57 67 68 66 75 77 88 76 87 89 78 69 79
+ 60 70 80  1 63 91 81 90  0 99  9 10 19 27  8 11 72 29 18 17 74 12 64  7
+  3 13 84 98]
+plotted activity
+plotted colorbar
+yo
+nmin 100
+0.0
+0.0029726028442382812
+0.0029726028442382812
+C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\rastermap\mapping.py:705: FutureWarning: elementwise comparison failed; returning scalar instead, but
+ in the future will perform elementwise comparison
+  if self.init == 'pca':
+C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\rastermap\mapping.py:711: FutureWarning: elementwise comparison failed; returning scalar instead, but
+ in the future will perform elementwise comparison
+  elif self.init == 'dbisomap':
+C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\rastermap\mapping.py:718: FutureWarning: elementwise comparison failed; returning scalar instead, but
+ in the future will perform elementwise comparison
+  elif self.init == 'random':
+C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\rastermap\mapping.py:726: FutureWarning: elementwise comparison failed; returning scalar instead, but
+ in the future will perform elementwise comparison
+  elif self.init =='laplacian':
+C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\rastermap\mapping.py:736: FutureWarning: elementwise comparison failed; returning scalar instead, but
+ in the future will perform elementwise comparison
+  elif self.init=='lle':
+C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\rastermap\mapping.py:754: FutureWarning: elementwise comparison failed; returning scalar instead, but
+ in the future will perform elementwise comparison
+  if self.init=='pca' or self.init=='laplacian' or self.init=='lle' or self.init=='dbisomap':
+0.005972862243652344
+(18, 20)
+(50,)
+1.0
+time; iteration;  explained PC variance
+0.00s     0        0.3195      2
+0.01s    10        0.4157      4
+0.02s    20        0.5275      8
+0.03s    30        0.6108      18
+0.04s    40        0.6170      18
+0.05s   final      0.6170
+0.05s upsampled    0.6170
+[ 0.845  0.84  -0.025  0.955  0.095  0.115  0.     0.955  0.95   0.85
+  0.895  0.95   0.955  0.955  0.205  0.155  0.185  0.955  0.95   0.9
+  0.37   0.385  0.245  0.25   0.245  0.18   0.185  0.945  0.305  0.95
+  0.39   0.395  0.395  0.255  0.3    0.2    0.31   0.55   0.55   0.305
+  0.395  0.4    0.385  0.355  0.31   0.305  0.305  0.545  0.555  0.55
+  0.495  0.44   0.44   0.36   0.305  0.615  0.62   0.64   0.62   0.605
+  0.745  0.435  0.445  0.84   0.955  0.615  0.645  0.64   0.64   0.715
+  0.755  0.4    0.95  -0.005  0.955  0.66   0.695  0.695  0.71   0.74
+  0.805  0.845  0.04   0.015  0.96   0.     0.     0.695  0.695  0.705
+  0.845  0.845  0.015  0.015  0.07   0.1    0.    -0.01   0.96   0.85 ]
+[ 2 97 73 86 85  6 96 83 92 93 82 94  4 95  5 15 25 16 26 35 14 22 24 23
+ 33 34 46 45 39 54 28 36 44 43 53 20 21 42 30 31 32 40 71 41 61 51 52 62
+ 50 47 49 38 37 48 59 65 55 56 58 57 67 68 66 75 77 88 76 87 89 78 69 79
+ 60 70 80  1 63 91 81 90  0 99  9 10 19 27  8 11 72 29 18 17 74 12 64  7
+  3 13 84 98]
+plotted activity
+plotted colorbar
+[array([[10.31900554, 25.07824884],
+       [13.01418325, 30.72127717]])] [array([[15.09615527, 29.72689879],
+       [10.93221124, 31.71565556],
+       [ 8.23703353, 26.07262722],
+       [12.40097755, 24.08387046],
+       [15.09615527, 29.72689879]])]
+[array([[ 7.53960353, 28.36299668],
+       [ 7.20270631, 32.65843615]]), array([[ 7.20270631, 32.65843615],
+       [10.15055693, 32.65843615]])] [array([[ 5.85924302, 32.55306961],
+       [ 8.5461696 , 32.7638027 ],
+       [ 8.88306682, 28.46836322],
+       [ 6.19614023, 28.25763013],
+       [ 5.85924302, 32.55306961]]), array([[10.15055693, 31.3108473 ],
+       [10.15055693, 34.00602501],
+       [ 7.20270631, 34.00602501],
+       [ 7.20270631, 31.3108473 ],
+       [10.15055693, 31.3108473 ]])]
+yo
+nmin 78
+0.0
+0.003998517990112305
+0.003998517990112305
+C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\rastermap\mapping.py:705: FutureWarning: elementwise comparison failed; returning scalar instead, but
+ in the future will perform elementwise comparison
+  if self.init == 'pca':
+C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\rastermap\mapping.py:711: FutureWarning: elementwise comparison failed; returning scalar instead, but
+ in the future will perform elementwise comparison
+  elif self.init == 'dbisomap':
+C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\rastermap\mapping.py:718: FutureWarning: elementwise comparison failed; returning scalar instead, but
+ in the future will perform elementwise comparison
+  elif self.init == 'random':
+C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\rastermap\mapping.py:726: FutureWarning: elementwise comparison failed; returning scalar instead, but
+ in the future will perform elementwise comparison
+  elif self.init =='laplacian':
+C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\rastermap\mapping.py:736: FutureWarning: elementwise comparison failed; returning scalar instead, but
+ in the future will perform elementwise comparison
+  elif self.init=='lle':
+C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\rastermap\mapping.py:754: FutureWarning: elementwise comparison failed; returning scalar instead, but
+ in the future will perform elementwise comparison
+  if self.init=='pca' or self.init=='laplacian' or self.init=='lle' or self.init=='dbisomap':
+0.00699925422668457
+(18, 20)
+(50,)
+1.0
+time; iteration;  explained PC variance
+0.00s     0        0.3407      2
+0.01s    10        0.4663      4
+0.02s    20        0.5499      8
+0.03s    30        0.6577      18
+0.04s    40        0.6646      18
+0.04s   final      0.6646
+0.04s upsampled    0.6646
+[ 0.     0.005  0.     0.05   0.05  -0.005  0.045  0.03   0.025  0.115
+  0.11   0.12   0.16   0.2    0.23   0.235  0.235  0.255  0.305  0.
+  0.35   0.35   0.35   0.905  0.905  0.9    0.9    0.9    0.41   0.415
+  0.41   0.42   0.415  0.43   0.425  0.415  0.3    0.425  0.445  0.485
+  0.44   0.49   0.495  0.585  0.555  0.56   0.605  0.645  0.6    0.595
+  0.705  0.7    0.71   0.705  0.705  0.71   0.64   0.74   0.745  0.785
+  0.605  0.85   0.85   0.855  0.85   0.965  0.95   0.3    0.955 -0.005
+ -0.01   0.94   0.    -0.005  0.     0.     0.    -0.005]
+[70 77 73  5 69 75 74 72 76 19  0  2  1  8  7  6  4  3 10  9 11 12 13 14
+ 16 15 17 67 36 18 21 22 20 30 28 35 32 29 31 34 37 33 40 38 39 41 42 44
+ 45 43 49 48 46 60 56 47 51 54 50 53 55 52 57 58 59 62 61 64 63 27 26 25
+ 24 23 71 66 68 65]
+plotted activity
+plotted colorbar
+[array([[ 8.21339795, 32.48998755],
+       [10.23478124, 30.21593135]])] [array([[ 8.54100515, 28.71034516],
+       [11.92855732, 31.72151754],
+       [ 9.90717404, 33.99557374],
+       [ 6.51962187, 30.98440135],
+       [ 8.54100515, 28.71034516]])]
+[array([[ 7.5357941 , 31.86878402],
+       [ 9.51927102, 29.23764116]])] [array([[ 8.55036416, 28.50723077],
+       [10.48817788, 29.96805155],
+       [ 8.50470096, 32.59919441],
+       [ 6.56688724, 31.13837363],
+       [ 8.55036416, 28.50723077]])]
+yo
+nmin 78
+0.0009601116180419922
+0.00852656364440918
+0.009526729583740234
+C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\rastermap\mapping.py:705: FutureWarning: elementwise comparison failed; returning scalar instead, but
+ in the future will perform elementwise comparison
+  if self.init == 'pca':
+C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\rastermap\mapping.py:711: FutureWarning: elementwise comparison failed; returning scalar instead, but
+ in the future will perform elementwise comparison
+  elif self.init == 'dbisomap':
+C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\rastermap\mapping.py:718: FutureWarning: elementwise comparison failed; returning scalar instead, but
+ in the future will perform elementwise comparison
+  elif self.init == 'random':
+C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\rastermap\mapping.py:726: FutureWarning: elementwise comparison failed; returning scalar instead, but
+ in the future will perform elementwise comparison
+  elif self.init =='laplacian':
+C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\rastermap\mapping.py:736: FutureWarning: elementwise comparison failed; returning scalar instead, but
+ in the future will perform elementwise comparison
+  elif self.init=='lle':
+C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\rastermap\mapping.py:754: FutureWarning: elementwise comparison failed; returning scalar instead, but
+ in the future will perform elementwise comparison
+  if self.init=='pca' or self.init=='laplacian' or self.init=='lle' or self.init=='dbisomap':
+0.018524169921875
+(18, 20)
+(50,)
+1.0
+time; iteration;  explained PC variance
+0.00s     0        0.3304      2
+0.02s    10        0.4664      4
+0.03s    20        0.5499      8
+0.03s    30        0.6467      18
+0.04s    40        0.6480      18
+0.05s   final      0.6480
+0.05s upsampled    0.6480
+[ 0.01   0.035  0.035  0.035  0.035  0.015  0.02   0.045  0.005  0.035
+  0.04   0.045  0.16   0.16   0.095  0.1    0.1    0.3    0.205  0.215
+  0.24   0.245  0.24   0.215  0.21   0.3    0.345  0.345  0.3    0.96
+  0.95   0.23   0.41   0.445  0.445  0.41   0.445  0.445  0.445  0.445
+  0.44   0.45   0.41   0.49   0.49   0.495  0.745  0.74   0.74   0.745
+  0.73   0.71   0.805  0.705  0.69   0.66   0.655  0.69   0.685  0.665
+  0.68   0.595  0.555  0.595  0.84   0.845  0.845  0.84   0.955  0.9
+  0.95   0.955  0.96  -0.01   0.     0.005  0.04   0.01 ]
+[73 74 75  8  0 77  5  6  4  9  3  2  1 76 10  7 11 14 15 16 12 13 18 24
+ 19 23 31 22 20 21 28 25 17 27 26 32 42 35 40 38 37 36 34 33 39 41 43 44
+ 45 62 61 63 56 55 59 60 58 57 54 53 51 50 47 48 46 49 52 64 67 65 66 69
+ 70 30 68 71 72 29]
+plotted activity
+plotted colorbar
+[array([[32.00547713,  8.82956433],
+       [29.43974005,  6.06646286]])] [array([[30.20432568,  5.35649327],
+       [28.67515443,  6.77643246],
+       [31.24089151,  9.53953393],
+       [32.77006275,  8.11959474],
+       [30.20432568,  5.35649327]])]
+yo
+nmin 71
+0.0
+0.002974271774291992
+0.002974271774291992
+C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\rastermap\mapping.py:705: FutureWarning: elementwise comparison failed; returning scalar instead, but
+ in the future will perform elementwise comparison
+  if self.init == 'pca':
+C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\rastermap\mapping.py:711: FutureWarning: elementwise comparison failed; returning scalar instead, but
+ in the future will perform elementwise comparison
+  elif self.init == 'dbisomap':
+C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\rastermap\mapping.py:718: FutureWarning: elementwise comparison failed; returning scalar instead, but
+ in the future will perform elementwise comparison
+  elif self.init == 'random':
+C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\rastermap\mapping.py:726: FutureWarning: elementwise comparison failed; returning scalar instead, but
+ in the future will perform elementwise comparison
+  elif self.init =='laplacian':
+C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\rastermap\mapping.py:736: FutureWarning: elementwise comparison failed; returning scalar instead, but
+ in the future will perform elementwise comparison
+  elif self.init=='lle':
+C:\Users\remy\anaconda3\envs\rastermap\lib\site-packages\rastermap\mapping.py:754: FutureWarning: elementwise comparison failed; returning scalar instead, but
+ in the future will perform elementwise comparison
+  if self.init=='pca' or self.init=='laplacian' or self.init=='lle' or self.init=='dbisomap':
+0.006975650787353516
+(18, 20)
+(50,)
+1.0
+time; iteration;  explained PC variance
+0.00s     0        0.3185      2
+0.01s    10        0.4711      4
+0.02s    20        0.5595      8
+0.03s    30        0.6708      18
+0.04s    40        0.6760      18
+0.04s   final      0.6760
+0.04s upsampled    0.6760
+[ 0.055  0.05   0.05   0.185  0.185  0.17   0.175  0.175  0.17   0.17
+  0.17   0.185  0.165  0.165  0.16   0.165  0.16   0.155  0.1    0.1
+  0.165  0.165  0.255  0.34   0.255  0.34   0.9    0.335  0.265  0.3
+  0.4    0.45   0.255  0.525  0.53   0.53   0.525  0.525  0.515  0.535
+  0.515  0.53   0.71   0.705  0.65   0.715  0.72   0.715  0.71   0.72
+  0.735  0.73   0.74   0.745  0.785  0.795  0.805  0.795  0.96  -0.005
+ -0.005 -0.005  0.605  0.85   0.845  0.89   0.85   0.845  0.855  0.9
+  0.4  ]
+[60 61 59  1  2  0 19 18 17 14 16 21 12 13 15 20  9  8  5 10  7  6  3  4
+ 11 22 24 32 28 29 27 25 23 70 30 31 38 40 36 37 33 34 35 41 39 62 44 43
+ 48 42 45 47 46 49 51 50 52 53 54 57 55 56 64 67 63 66 68 65 69 26 58]
+plotted activity
+plotted colorbar

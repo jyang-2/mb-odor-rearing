@@ -1,0 +1,52 @@
+---
+title: "R Notebook"
+output:
+  html_document: 
+    toc: yes
+    number_sections: yes
+---
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+
+Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Ctrl+Shift+Enter*. 
+
+```{r message=FALSE}
+library(tidyverse)
+library(magrittr)
+library(dplyr)
+library(rjson)
+library(jsonlite)
+library(knitr)
+```
+
+Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Ctrl+Alt+I*.
+
+When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Ctrl+Shift+K* to preview the HTML file).
+
+The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike *Knit*, *Preview* does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.
+```{r, load-fly-manifest}
+# 
+# # filepath = paste0("/media/remy/remy-storage/Remy's Dropbox Folder/",
+# #             "HongLab @ Caltech Dropbox/Remy/mb-odor-rearing/",
+# #             "data/processed/fly_manifest.json")
+# # filepath <- 
+# #   getwd() %>% 
+# #   dirname %>% 
+# #   file.path("mb-odor-rearing", "data", "processed", "fly_manifest.json")
+# 
+filepath <- file.path("..",
+                      "mb-odor-rearing",
+                      "data", 
+                      "processed", 
+                      "fly_manifest.json")
+# 
+# fly_manifest <-
+#   rjson::fromJSON(filepath, simplifyDataFrame = TRUE) %>%
+#   arrange(fly_uid)
+fly_manifest <-
+  fromJSON(filepath, simplifyVector = TRUE) %>%
+  arrange(fly_uid)
+
+knitr::kable(fly_manifest)
+```
+

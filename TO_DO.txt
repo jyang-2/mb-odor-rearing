@@ -1,0 +1,37 @@
+TO DO:
+- lowpass filter Fc ()
+
+[ ] Rastermap plots (presentation and stimulus order)
+		- rasterplot.py
+		- zscore blocks separately (using frametimeinfo)
+
+[ ] Make combined plots
+	- for pearson, cosine distances
+	- trial-trial corrmat - suite2p/dist_all(resp).npy (upper triangular if possible)
+	-        mean corrmat - suite2p/dist_mean_all(resp).npy
+
+	- long-form odor-odor correlations - tidy_corr_all(resp).feather (filter by column 'corrtype')
+	- vis.corrscatter, sns.violinplot 
+
+[ ] Response strengths
+	- peak_amp vs. peak_nstd (3d surface, or pcolormesh/contour plot)
+
+[ ] Correlation matrices for all datasets
+
+[ ] Mean correlation scatter plots
+	- see: tidy_corr_all(resp).feather (filter by column 'corrtype')
+	- vis.corrscatter, sns.violinplot 
+	
+[ ] UpSet plots
+
+[ ] Matrix factorization
+
+[ ] Tensor component analysis
+
+
+See fig_compare_response_strength.py - has code for saving intermediate processed files
+	- refactor in intermediate_analysis.py?
+
+
+------------------
+python : row major order (cell, time) --> split to trial? (cell, trial, time)

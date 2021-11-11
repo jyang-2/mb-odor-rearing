@@ -1,0 +1,196 @@
+Datetime: 2021-06-26 (Saturday)
+Project : mb-odor-rearing
+Dissection : Remy
+Imaging : Remy
+Odor mixing : Remy
+Microscope: galvo-res
+
+Fly info:
+    1: 
+        reared: 1-6ol [-2] + EP [-2]
+        connected: 6/20
+        eclosed : 6/22/21, before 12 PM
+        removed from odor bottle: 06/25 12:30 PM
+        hemisphere imaged: LHS
+
+    2:
+        reared: pfo 
+        connected: 6/20
+        eclosed:  6/22/21, before 12 PM
+        removed from odor bottle: 06/26 2 PM
+        hemisphere imaged: RHS (on screen)
+        
+PID settings:
+    name: Pollux
+    ID: 2
+    gain: 10
+    pump: low
+
+Odor delivery: 
+    air flow: 
+        carrier: 1600
+        odor: 400        
+    pin odors:
+        2: 1-hexanol (-5)
+        3: 1-hexanol (-4)
+        4: 1-hexanol (-3)
+        5: 1-pentanol (-5)
+        6: 1-pentanol (-4)
+        7: 1-pentanol (-3)
+        8: ethyl propionate (-3)
+        9: ethyl propionate (-4)
+        10: ethyl propionate (-5)
+        11: benzaldehyde (-3)
+        12: paraffin (0)
+        31: paraffin (0)
+
+     
+PID: 
+    settings:
+        name: Pollux
+        ID: 2
+        gain: 10
+        pump: low
+    acquisitions:
+        -
+            thorsyncfile: SyncData000
+            conc:
+            # ----------- metadata yaml -----------
+            channelA: [31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31,  2,  3,  4]
+            channelB: [12,  5,  6,  7, 12,  2,  3,  4, 12, 10,  9,  8, 12, 10,  9,  8]
+            flow: 400 mL/min
+            notes: noisy, small amplitude b/c dirty lamp (cleaned w/ methanol afterwards)
+
+Acquisitions:
+    fly1: # imaging from 4 - 8 PM
+        -
+            thorimage: movie
+            thorsync: SyncData000
+            stimulus:
+                channelA: [31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31,  2,  3,  4]
+                channelB: [12,  5,  6,  7, 12,  2,  3,  4, 12, 10,  9,  8, 12, 10,  9,  8]
+            notes: PID; all odors
+        -
+            thorimage: movie_001
+            thorsync: SyncData001
+            stimulus: 
+                channelA: [31, 31, 31, 31,  4, 31, 31, 31,  4, 31, 31, 31, 31, 31,  4]
+                channelB: [12,  8,  7,  4,  8, 12,  4,  8,  8,  7, 12,  8,  7,  4,  8]
+            notes: conc_block = {-3, -3, -3}; 3864 frames; 
+        -
+            thorimage: movie_002
+            thorsync: SyncData002
+            stimulus:
+                channelA: [31,  2, 31, 31, 31, 31, 31, 31, 31,  2, 31, 31, 31, 31,  2]
+                channelB: [12, 10,  2, 10,  5, 12,  5, 10,  2, 10, 12,  2,  5, 10, 10]
+            notes: conc_block = {-5; -5; -5}; coverred LEDs, 3864 frames
+        -
+            thorimage: movie_003
+            thorsync: SyncData003
+            stimulus:
+                channelA: [31, 31, 31, 31,  3, 31, 31, 31,  3, 31, 31, 31, 31, 31,  3]
+                channelB: [12,  9,  6,  3,  9, 12,  3,  9,  9,  6, 12,  9,  6,  3,  9]
+            notes: conc_block =  {-4, -4, -4}
+            
+        -
+            thorimage: movie_004
+            thorsync: SyncData004
+            stimulus:
+                channelA: [31, 31, 31, 31,  3, 31, 31, 31,  3, 31, 31, 31, 31, 31,  3]
+                channelB: [12,  9,  6,  3,  9, 12,  3,  9,  9,  6, 12,  9,  6,  3,  9]
+            notes: conc_block =  {-4, -4, -4}
+        -
+            thorimage: movie_005
+            thorsync: SyncData005
+            stimulus:                 
+                channelA: [31, 31, 31, 31,  4, 31, 31, 31,  4, 31, 31, 31, 31, 31,  4]
+                channelB: [12,  8,  7,  4,  8, 12,  4,  8,  8,  7, 12,  8,  7,  4,  8]
+            notes: conc_block = {-3, -3, -3}
+
+        -
+            thorimage: movie_006
+            thorsync: SyncData006
+            stimulus:  
+                channelA: [31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31]
+                channelB: [12,  8,  7,  4, 11, 12,  4,  8, 11,  7, 12,  8,  7,  4, 11]
+            notes: conc_block = {-3, -3, -3}; pfo/pentanol/hexanol/EP/benz; 3864 frames total
+            
+        -
+            thorimage: zstack
+            thorsync: ~
+            stimulus: ~
+            notes: anatomical stack, 512 x 512 x 201, .3 um z step size; pockels = 20
+        -
+            thorimage: zstack_001
+            thorsync: ~
+            stimulus: ~
+            notes: anatomical stack, 512 x 512 x 201, .3 um z step size;  pockels1 = 25
+            
+    fly2:
+    
+        -
+            thorimage: zstack
+            thorsync: ~
+            stimulus: ~
+            notes: anatomical stack, 512 x 512 x 121; 0.5 um z-step size; 4.0x zoom
+        -
+            thorimage: movie
+            thorsync: SyncData000
+            stimulus: 
+                channelA: [31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31,  2,  3,  4]
+                channelB: [12,  5,  6,  7, 12,  2,  3,  4, 12, 10,  9,  8, 12, 10,  9,  8]
+            notes: PID; 440 frames per block; 
+        -
+            thorimage: movie_001
+            thorsync: SyncData001
+            stimulus:
+                channelA: [31, 31, 31, 31,  4, 31, 31, 31,  4, 31, 31, 31, 31, 31,  4]
+                channelB: [12,  8,  7,  4,  8, 12,  4,  8,  8,  7, 12,  8,  7,  4,  8]
+            notes: conc_list = {-3, -3, -3}; 5796 frames total; 
+        -
+            thorimage: movie_002
+            thorsync: SyncData002
+            stimulus: 
+                channelA: [31,  2, 31, 31, 31, 31, 31, 31, 31,  2, 31, 31, 31, 31,  2]
+                channelB: [12, 10,  2, 10,  5, 12,  5, 10,  2, 10, 12,  2,  5, 10, 10]
+            notes: conc_list = {-5, -5, -5}; pockels = 20;
+        -
+            thorimage: movie_003
+            thorsync: SyncData003
+            stimulus: 
+                channelA: [31, 31, 31, 31,  3, 31, 31, 31,  3, 31, 31, 31, 31, 31,  3]
+                channelB: [12,  9,  6,  3,  9, 12,  3,  9,  9,  6, 12,  9,  6,  3,  9]
+            notes: conc_list = {-4, -4, -4}; pockels = 25; 
+        -
+            thorimage: movie_004
+            thorsync: SyncData004
+            stimulus: 
+                channelA: [31,  4, 31, 31, 31, 31, 31, 31, 31,  4, 31, 31, 31, 31,  4]
+                channelB: [12,  8,  4,  8,  7, 12,  7,  8,  4,  8, 12,  4,  7,  8,  8]
+            notes: conc_list = {-3, -3, -3}; frame rate = 7.6; drift and warping, brain doesn't look great
+            
+        -
+            thorimage: movie_005
+            thorsync: SyncData005
+            stimulus: 
+                channelA: [31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31]
+                channelB: [12,  8,  7,  4, 11, 12,  4,  8, 11,  7, 12,  8,  7,  4, 11]
+            notes: benz; -3; fast z (10 + 4 slices); 256 x 256 x 10; pockels=29; not sure if volume stacks/sweeps are stable; 
+                   44988 frames total; 14996 frames per block; 
+                   3213 timepoints total; 1071 timepoints per block; 
+                   not evenly divided; max frames per stimulus was 15000, slightly too short;
+        -
+            thorimage: zstack_001
+            thorsync: ~
+            stimulus: ~
+            notes: 512 x 512 x 201; z-step 3 um; 4.0x zoom
+        -
+            thorimage: movie_006
+            thorsync: SyncData006
+            stimulus: 
+                channelA: [31,  4, 31, 31, 31, 31, 31, 31, 31,  4, 31, 31, 31, 31,  4]
+                channelB: [12,  8,  4,  8,  7, 12,  7,  8,  4,  8, 12,  4,  7,  8,  8]
+            notes: conc_list = {-3, -3, -3}; A, B, AB mix; fast-z; 11 + 4 slices;
+                    45315 frames total; 15105 frames per block; very stable!
+                    3021 time points total; 1007 timepoints per block;
+            

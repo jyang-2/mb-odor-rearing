@@ -1,0 +1,20 @@
+# preprocess
+folder = pathlib.Path("...")
+
+# load metadata.yaml
+
+
+# thorimage files 
+- find each "**/Experiment.xml" file
+- go through and make xml_meta.yaml file
+
+# thorsync files
+- extract all timepoints >> raw_timepoints.npy (1-d vector)
+- sync_meta.yaml: 
+    n_blocks: 5
+    n_stim: 4
+    stim_ict: [...]
+    stim_fct: [...]
+    block_ict: [...]
+    block_fct: [...]
+- copy sync_meta.yaml to thorimage folder
